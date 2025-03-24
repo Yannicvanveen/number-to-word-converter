@@ -1,4 +1,8 @@
-# number-to-word
+# Number to word converter
+
+Converts numbers to words.
+
+## Setup
 
 To install dependencies:
 
@@ -12,4 +16,13 @@ To run:
 bun run index.ts
 ```
 
-This project was created using `bun init` in bun v1.2.5. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## Usage
+
+```typescript
+import { EnglishPreset } from './src/utilities/number-to-word-converter-presets'
+import { NumberToWordConverter } from './src/utilities/number-to-word-converter'
+
+const englishNumberToWord = new NumberToWordConverter(EnglishPreset)
+
+englishNumberToWord.convert(1234) // one thousand two hundred thirty-four
+```
